@@ -10,7 +10,7 @@ AC
  - List all event types as navigation items on the left
 
 Notes
- - See (mock)[./mocks/nav.png]
+ - See [mock](./mocks/nav.png)
 
 ### 2. Users need details for each event type
 
@@ -19,7 +19,7 @@ AC
  - Display first event type on load
 
 Notes
- - See (mock)[./mocks/navAndDetails.png]
+ - See [mock](./mocks/navAndDetails.png)
 
 ### 3. Users need a group filter
 
@@ -28,4 +28,4 @@ AC
  - Select first event type when group changes
 
 Notes
- - See (mock)[./mocks/navDetailsAndGroups.png]
+ - See [mock](./mocks/navDetailsAndGroups.png)
