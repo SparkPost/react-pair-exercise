@@ -1,28 +1,34 @@
 {
   "name": "react-pair-exercise",
-  "version": "1.0.0",
-  "description": "",
-  "keywords": [],
+  "version": "2.0.0",
+  "description": "SparkPost React Pair Programming Exercise",
+  "keywords": [
+    "SparkPost",
+    "react",
+    "exercise"
+  ],
   "main": "src/index.js",
   "dependencies": {
-    "@sparkpost/matchbox": "^3.5.0",
-    "@sparkpost/matchbox-icons": "^1.1.12",
-    "enzyme": "3.10.0",
-    "enzyme-adapter-react-16": "1.14.0",
+    "@sparkpost/design-tokens": "^5.0.0",
+    "@sparkpost/matchbox": "^5.0.0",
+    "@sparkpost/matchbox-icons": "^5.0.0",
     "prop-types": "15.7.2",
-    "react": "16.8.6",
-    "react-dom": "16.8.6",
-    "react-scripts": "3.0.1"
+    "react": "^17.0.2",
+    "react-day-picker": "^7.4.10",
+    "react-dom": "^17.0.2",
+    "react-scripts": "^4.0.3",
+    "styled-components": "^5.2.3"
   },
   "devDependencies": {},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom --u",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --env=jsdom --u"
   },
-  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"],
-  "changeLog": {
-    "1.0.0": "Init"
-  }
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
