@@ -1,22 +1,45 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { UnstyledLink } from "@sparkpost/matchbox";
-import styles from "./NavItem.module.scss";
+import styled from "styled-components";
+import { Box, Text, UnstyledLink } from "@sparkpost/matchbox";
 
-const NavItem = ({ children, onClick, selected }) => (
-  <div className={styles.NavItemContainer}>
-    <UnstyledLink 
-      children={children}
-      className={selected ? styles.SelectedNavItem : styles.NavItem}
-      onClick={onClick}
-    />
-  </div>
-);
+const SelectedItem = styled(Text)`
+  text-decoration: underline;
+`;
+
+const SelectableItem = styled(UnstyledLink)`
+  text-decoration: none;
+
+  :hover {
+    text-decoration: underline;
+  }
+`;
+
+const NavItem = ({ children, onClick, selected }) => {
+  const handleClick = (event) => {
+    event.preventDefault();
+    onClick();
+  };
+
+  return (
+    <Box marginBottom="200">
+      {selected ? (
+        <SelectedItem aria-current={true} role="menuitem">
+          {children}
+        </SelectedItem>
+      ) : (
+        <SelectableItem href="#" onClick={handleClick} role="menuitem">
+          {children}
+        </SelectableItem>
+      )}
+    </Box>
+  );
+};
 
 NavItem.propTypes = {
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func,
-  selected: PropTypes.bool
+  selected: PropTypes.bool,
 };
 
 export default NavItem;

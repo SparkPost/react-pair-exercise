@@ -1,26 +1,24 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render, fireEvent, screen } from "@testing-library/react";
 import NavItem from "../NavItem";
 
 describe("NavItem", () => {
-  let props;
-  let wrapper;
-
-  beforeEach(() => {
-    props = {
-      onClick: jest.fn()
-    };
-
-    wrapper = shallow(<NavItem {...props}>Click Me</NavItem>);
-  });
-
   it("handles click events", () => {
-    wrapper.find("UnstyledLink").simulate("click");
-    expect(props.onClick).toHaveBeenCalled();
+    const onClick = jest.fn();
+    render(<NavItem onClick={onClick}>Click Me</NavItem>);
+    fireEvent.click(screen.getByText("Click Me"));
+    expect(onClick).toHaveBeenCalled();
   });
 
   it("renders selected nav item", () => {
-    wrapper.setProps({ selected: true });
-    expect(wrapper.find("UnstyledLink").prop("className")).toMatch(/SelectedNavItem/);
+    const onClick = jest.fn();
+
+    render(
+      <NavItem onClick={onClick} selected={true}>
+        Click Me
+      </NavItem>
+    );
+
+    expect(screen.getByRole("menuitem", { current: true })).toHaveTextContent("Click Me");
   });
 });
