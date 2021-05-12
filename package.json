@@ -12,16 +12,14 @@
     "@sparkpost/design-tokens": "^5.0.0",
     "@sparkpost/matchbox": "^5.0.0",
     "@sparkpost/matchbox-icons": "^5.0.0",
+    "@testing-library/jest-dom": "^5.11.10",
+    "@testing-library/react": "^11.2.6",
     "prop-types": "15.7.2",
     "react": "^17.0.2",
     "react-day-picker": "^7.4.10",
     "react-dom": "^17.0.2",
     "react-scripts": "^4.0.3",
     "styled-components": "^5.2.3"
-  },
-  "devDependencies": {
-    "@testing-library/jest-dom": "^5.11.10",
-    "@testing-library/react": "^11.2.6"
   },
   "scripts": {
     "start": "react-scripts start",
