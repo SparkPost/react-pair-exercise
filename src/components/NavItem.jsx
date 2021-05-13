@@ -24,11 +24,9 @@ const NavItem = ({ children, onClick, selected }) => {
   return (
     <Box marginBottom="200">
       {selected ? (
-        <SelectedItem aria-current={true} role="menuitem">
-          {children}
-        </SelectedItem>
+        <SelectedItem aria-current={true}>{children}</SelectedItem>
       ) : (
-        <SelectableItem href="#" onClick={handleClick} role="menuitem">
+        <SelectableItem href="#" onClick={handleClick}>
           {children}
         </SelectableItem>
       )}

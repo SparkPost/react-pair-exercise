@@ -19,6 +19,6 @@ describe("NavItem", () => {
       </NavItem>
     );
 
-    expect(screen.getByRole("menuitem", { current: true })).toHaveTextContent("Click Me");
+    expect(screen.getByText("Click Me")).toHaveAttribute("aria-current");
   });
 });
